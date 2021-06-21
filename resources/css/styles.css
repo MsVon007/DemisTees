@@ -1,0 +1,315 @@
+/*------------------------------*/
+/* BASICK SETUP*/
+/*------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: rgb(241, 209, 22);
+    color: #555;
+    font-family: 'Lato', 'Arial', 'san-serif';
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clearfix {zoom: 1}
+.clearfix::after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*------------------------------*/
+/*REUSUABLE COMPONENTS*/
+/*------------------------------*/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ---HEADINGS---- */
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 250%;
+    word-spacing: 3px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+
+}
+
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: #c0392b;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* ----- PARAGRAPHS ----- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ----- ICONS ----- */
+
+.icon-big {
+    font-size: 300%;
+    display: block;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #c0392b;
+    font-size: 120%;
+    margin-right: 10px;
+
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ---BUTTONS---- */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #c0392b;
+    border: 1px solid #c0392b;
+    color: #fff;
+    margin-right: 25px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #c0392b;
+    color: #c0392b;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #511812;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #c0392b;
+    
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #c0392b;
+    color: #fff;
+}
+
+/*------------------------------*/
+/*HEADER*/
+/*------------------------------*/
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.568), rgba(0, 0, 0, 0.568)), url(img/hero.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, 10%);
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+    color: #fff;
+
+}
+
+.main-nav li:link,
+.main-nav li:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li:hover,
+.main-nav li:active {
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 5px solid #c0392b;
+}
+
+/*-------------------------------------*/
+/*FEATURES*/
+/*-------------------------------------*/
+
+.section-behind-the-brand .long-copy {
+    margin-bottom: 30px;
+}
+
+.section-behind-the-brand p {
+    font-size: 85%;
+}
+
+
+/*-------------------------------------*/
+/*PRODUCTS*/
+/*-------------------------------------*/
+
+.section-products {
+    padding: 0;
+}
+
+.products-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.products-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.product-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.product-photo img {
+    opacity: 0.65;
+    width: 100%;
+    height: auto;
+    transform: scale(1.10);
+    transition: 0.5s, 0.5s;
+}
+
+.product-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/*-------------------------------------*/
+/*TESTIMONIALS*/
+/*-------------------------------------*/
+
+.testimonials{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Images/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+
+blockquote:before {
+    content: "\201C";
+    font-size: 200%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 125%;
+    position: relative;
+    margin-top: 40px;
+}
+
+cite {
+    font-size: 80%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
